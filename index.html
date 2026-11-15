@@ -1,0 +1,171 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Squad World 4</title>
+<meta name="description" content="Squad World 4: decompilación de Digimon World 4 (PS2) y los proyectos que la rodean.">
+<meta name="theme-color" content="#0c101c">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <defs>
+    <g id="artg">
+      <path d="M8 28 V6 Q8 4 10 4 H70 Q82 4 84 22 L84 28 Z" fill="var(--d)"/>
+      <path d="M8 27 H62 Q82 27 82 50 V204 Q82 214 72 214 H20 Q8 214 8 202 Z" fill="var(--c)"/>
+      <path class="st st1" d="M96 152 H232 L242 158 H96 Z" fill="var(--c)"/>
+      <path class="st st2" d="M104 166 H208 L218 174 H104 Z" fill="var(--c)"/>
+      <path class="st st3" d="M96 190 H290 L300 197 H96 Z" fill="var(--c)"/>
+      <path class="st st4" d="M110 204 H184 L192 211 H110 Z" fill="var(--c)"/>
+      <circle cx="58" cy="172" r="44" fill="var(--c)" stroke="var(--k)" stroke-width="3.2"/>
+      <circle class="spin" cx="58" cy="172" r="35" fill="none" stroke="var(--k)" stroke-width="2" stroke-dasharray="26 8"/>
+      <path d="M31 150 L85 194" stroke="var(--k)" stroke-width="8.5" stroke-linecap="round"/>
+    </g>
+  </defs>
+</svg>
+
+<div class="splash" id="splash" role="button" tabindex="0" aria-labelledby="spl">
+  <svg class="tunnel" viewBox="0 0 1600 1000" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+<defs><radialGradient id="tg" cx="800" cy="575" r="1000" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff"/><stop offset=".05" stop-color="#eef2ff"/><stop offset=".14" stop-color="#a9b6ff"/><stop offset=".3" stop-color="#6a6bd8"/><stop offset=".55" stop-color="#2f3084"/><stop offset="1" stop-color="#0a0b2e"/></radialGradient>
+<radialGradient id="glow" cx="800" cy="575" r="260" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#fff" stop-opacity=".95"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></radialGradient></defs>
+<rect width="1600" height="1000" fill="url(#tg)"/>
+<polygon points="800.0,575.0 2832.5,1231.7 1641.9,2160.4" fill="rgba(10,10,60,.22)"/>
+<polygon points="800.0,575.0 1641.9,2160.4 -41.9,2160.4" fill="rgba(255,255,255,.10)"/>
+<polygon points="800.0,575.0 -41.9,2160.4 -1232.5,1231.7" fill="rgba(10,10,60,.22)"/>
+<polygon points="800.0,575.0 -1232.5,1231.7 -1232.5,-81.7" fill="rgba(255,255,255,.10)"/>
+<polygon points="800.0,575.0 -1232.5,-81.7 -41.9,-1010.4" fill="rgba(10,10,60,.22)"/>
+<polygon points="800.0,575.0 -41.9,-1010.4 1641.9,-1010.4" fill="rgba(255,255,255,.10)"/>
+<polygon points="800.0,575.0 1641.9,-1010.4 2832.5,-81.7" fill="rgba(10,10,60,.22)"/>
+<polygon points="800.0,575.0 2832.5,-81.7 2832.5,1231.7" fill="rgba(255,255,255,.10)"/>
+<g class="rings" fill="none" stroke="rgba(255,255,255,.34)" stroke-width="2.5" vector-effect="non-scaling-stroke"><polygon points="2185.8,1022.7 1374.0,1655.9 226.0,1655.9 -585.8,1022.7 -585.8,127.3 226.0,-505.9 1374.0,-505.9 2185.8,127.3"/><polygon points="1825.5,906.3 1224.8,1374.9 375.2,1374.9 -225.5,906.3 -225.5,243.7 375.2,-224.9 1224.8,-224.9 1825.5,243.7"/><polygon points="1558.9,820.2 1114.3,1166.9 485.7,1166.9 41.1,820.2 41.1,329.8 485.7,-16.9 1114.3,-16.9 1558.9,329.8"/><polygon points="1361.6,756.4 1032.6,1013.0 567.4,1013.0 238.4,756.4 238.4,393.6 567.4,137.0 1032.6,137.0 1361.6,393.6"/><polygon points="1215.6,709.3 972.1,899.1 627.9,899.1 384.4,709.3 384.4,440.7 627.9,250.9 972.1,250.9 1215.6,440.7"/><polygon points="1107.5,674.4 927.4,814.9 672.6,814.9 492.5,674.4 492.5,475.6 672.6,335.1 927.4,335.1 1107.5,475.6"/><polygon points="1027.6,648.5 894.3,752.5 705.7,752.5 572.4,648.5 572.4,501.5 705.7,397.5 894.3,397.5 1027.6,501.5"/><polygon points="968.4,629.4 869.8,706.3 730.2,706.3 631.6,629.4 631.6,520.6 730.2,443.7 869.8,443.7 968.4,520.6"/><polygon points="924.6,615.3 851.6,672.2 748.4,672.2 675.4,615.3 675.4,534.7 748.4,477.8 851.6,477.8 924.6,534.7"/><polygon points="892.2,604.8 838.2,646.9 761.8,646.9 707.8,604.8 707.8,545.2 761.8,503.1 838.2,503.1 892.2,545.2"/><polygon points="868.2,597.0 828.3,628.2 771.7,628.2 731.8,597.0 731.8,553.0 771.7,521.8 828.3,521.8 868.2,553.0"/><polygon points="850.5,591.3 820.9,614.4 779.1,614.4 749.5,591.3 749.5,558.7 779.1,535.6 820.9,535.6 850.5,558.7"/><polygon points="837.4,587.1 815.5,604.1 784.5,604.1 762.6,587.1 762.6,562.9 784.5,545.9 815.5,545.9 837.4,562.9"/><polygon points="827.7,583.9 811.5,596.6 788.5,596.6 772.3,583.9 772.3,566.1 788.5,553.4 811.5,553.4 827.7,566.1"/><polygon points="820.5,581.6 808.5,591.0 791.5,591.0 779.5,581.6 779.5,568.4 791.5,559.0 808.5,559.0 820.5,568.4"/><polygon points="815.1,579.9 806.3,586.8 793.7,586.8 784.9,579.9 784.9,570.1 793.7,563.2 806.3,563.2 815.1,570.1"/><polygon points="811.2,578.6 804.6,583.7 795.4,583.7 788.8,578.6 788.8,571.4 795.4,566.3 804.6,566.3 811.2,571.4"/><polygon points="808.3,577.7 803.4,581.5 796.6,581.5 791.7,577.7 791.7,572.3 796.6,568.5 803.4,568.5 808.3,572.3"/><polygon points="806.1,577.0 802.5,579.8 797.5,579.8 793.9,577.0 793.9,573.0 797.5,570.2 802.5,570.2 806.1,573.0"/><polygon points="804.5,576.5 801.9,578.5 798.1,578.5 795.5,576.5 795.5,573.5 798.1,571.5 801.9,571.5 804.5,573.5"/><polygon points="803.4,576.1 801.4,577.6 798.6,577.6 796.6,576.1 796.6,573.9 798.6,572.4 801.4,572.4 803.4,573.9"/><polygon points="802.5,575.8 801.0,576.9 799.0,576.9 797.5,575.8 797.5,574.2 799.0,573.1 801.0,573.1 802.5,574.2"/></g>
+<line x1="800" y1="575" x2="2832.5" y2="1231.7" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<line x1="800" y1="575" x2="1641.9" y2="2160.4" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<line x1="800" y1="575" x2="-41.9" y2="2160.4" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<line x1="800" y1="575" x2="-1232.5" y2="1231.7" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<line x1="800" y1="575" x2="-1232.5" y2="-81.7" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<line x1="800" y1="575" x2="-41.9" y2="-1010.4" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<line x1="800" y1="575" x2="1641.9" y2="-1010.4" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<line x1="800" y1="575" x2="2832.5" y2="-81.7" stroke="rgba(255,255,255,.3)" stroke-width="2"/>
+<g class="lights" fill="none"><line x1="800" y1="575" x2="3200.0" y2="575.0" style="animation-delay:-0.00s"/><line x1="800" y1="575" x2="3017.3" y2="1291.4" style="animation-delay:-0.37s"/><line x1="800" y1="575" x2="2497.1" y2="1898.7" style="animation-delay:-0.74s"/><line x1="800" y1="575" x2="1718.4" y2="2304.5" style="animation-delay:-1.11s"/><line x1="800" y1="575" x2="800.0" y2="2447.0" style="animation-delay:-1.48s"/><line x1="800" y1="575" x2="-118.4" y2="2304.5" style="animation-delay:-1.85s"/><line x1="800" y1="575" x2="-897.1" y2="1898.7" style="animation-delay:-2.22s"/><line x1="800" y1="575" x2="-1417.3" y2="1291.4" style="animation-delay:-2.59s"/><line x1="800" y1="575" x2="-1600.0" y2="575.0" style="animation-delay:-2.96s"/><line x1="800" y1="575" x2="-1417.3" y2="-141.4" style="animation-delay:-0.33s"/><line x1="800" y1="575" x2="-897.1" y2="-748.7" style="animation-delay:-0.70s"/><line x1="800" y1="575" x2="-118.4" y2="-1154.5" style="animation-delay:-1.07s"/><line x1="800" y1="575" x2="800.0" y2="-1297.0" style="animation-delay:-1.44s"/><line x1="800" y1="575" x2="1718.4" y2="-1154.5" style="animation-delay:-1.81s"/><line x1="800" y1="575" x2="2497.1" y2="-748.7" style="animation-delay:-2.18s"/><line x1="800" y1="575" x2="3017.3" y2="-141.4" style="animation-delay:-2.55s"/></g><ellipse class="ripple" cx="800" cy="575" rx="60" ry="47"/><ellipse class="ripple r2" cx="800" cy="575" rx="60" ry="47"/><ellipse class="coreglow" cx="800" cy="575" rx="300" ry="230" fill="url(#glow)"/></svg>
+  <svg class="logo" viewBox="0 0 650 230" aria-hidden="true">
+  <defs>
+    <linearGradient id="gY" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fffbd6"/><stop offset=".5" stop-color="#ffe45a"/><stop offset="1" stop-color="#ffae00"/></linearGradient>
+    <linearGradient id="gO" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ffb62e"/><stop offset=".55" stop-color="#ff5a1f"/><stop offset="1" stop-color="#cf2810"/></linearGradient>
+    <pattern id="hatch" width="9" height="9" patternUnits="userSpaceOnUse" patternTransform="skewX(-25)"><rect width="9" height="9" fill="#c81d0d"/><rect width="3.5" height="9" fill="#fff" opacity=".55"/></pattern>
+    <clipPath id="pillclip"><rect x="14" y="14" width="396" height="118" rx="30"/></clipPath>
+    <text id="tSquad" x="212" y="92" text-anchor="middle" font-size="90" textLength="316" lengthAdjust="spacingAndGlyphs">SQUAD</text>
+    <text id="tWorld" x="14" y="214" font-size="92" textLength="372" lengthAdjust="spacingAndGlyphs">WORLD</text>
+    <text id="tFour" x="418" y="212" font-size="265" textLength="176" lengthAdjust="spacingAndGlyphs">4</text>
+  </defs>
+  <g font-family="Impact,'Arial Black','Haettenschweiler',sans-serif" font-weight="900" font-style="italic" stroke-linejoin="round">
+    <rect x="8" y="8" width="408" height="130" rx="34" fill="#1a0a06" stroke="#1a0a06" stroke-width="6"/>
+    <rect x="14" y="14" width="396" height="118" rx="30" fill="url(#gO)"/>
+    <g clip-path="url(#pillclip)"><rect x="14" y="100" width="396" height="32" fill="url(#hatch)"/><rect x="14" y="98" width="396" height="3" fill="#1a0a06"/></g>
+    <rect x="18" y="18" width="388" height="110" rx="27" fill="none" stroke="#ffe9a8" stroke-width="1.6" opacity=".75"/>
+    <use href="#tSquad" fill="none" stroke="#4a1608" stroke-width="12"/>
+    <use href="#tSquad" fill="url(#gY)"/>
+    <text x="40" y="123.5" font-size="15" font-style="italic" font-weight="700" fill="#fff" stroke="#6b0f05" stroke-width="3" paint-order="stroke" font-family="system-ui,sans-serif" letter-spacing="1.5" data-i18n="sub">PS2 DECOMPILATION</text>
+    <use href="#tWorld" fill="none" stroke="#0a2a6b" stroke-width="16"/>
+    <use href="#tWorld" fill="none" stroke="#fff" stroke-width="5"/>
+    <use href="#tWorld" fill="url(#gY)"/>
+    <use href="#tFour" fill="none" stroke="#0a2a6b" stroke-width="30"/>
+    <use href="#tFour" fill="none" stroke="#7cc4ff" stroke-width="11"/>
+    <use href="#tFour" fill="url(#gY)"/>
+  </g>
+</svg>
+  <div class="band"><span class="gt" aria-hidden="true">&gt;</span><span id="spl" data-i18n="ps"></span><span class="gt" aria-hidden="true">&lt;</span></div>
+  <p class="credits"><span data-i18n="c1"></span><span data-i18n="c2"></span><span data-i18n="c3"></span></p>
+  <div class="boot" aria-hidden="true">
+    <svg viewBox="0 0 640 360" width="100%" height="100%" preserveAspectRatio="xMidYMid meet" fill="none" stroke="#2f6bff" stroke-width="2.2" stroke-linecap="square">
+      <g class="circ" filter="url(#bglow)">
+        <path pathLength="100" d="M-10 150 H150 L170 170 V220 L200 250"/>
+        <path pathLength="100" d="M-10 215 H110 L130 235 V300 L150 320"/>
+        <path pathLength="100" d="M650 120 H500 L470 150"/>
+        <path pathLength="100" d="M650 190 H520 L490 220 V280 L520 310"/>
+        <path pathLength="100" d="M650 250 H580"/>
+        <path pathLength="100" d="M-10 90 H80 L110 120"/>
+        <ellipse cx="320" cy="180" rx="118" ry="132" pathLength="100"/>
+        <path pathLength="100" d="M270 110 V150 L250 170 V215 L285 240 V262"/>
+        <path pathLength="100" d="M335 100 L345 128 V165 L330 185 L360 215"/>
+        <ellipse class="glyphs" cx="320" cy="180" rx="134" ry="148" stroke-dasharray="3 6 12 6" stroke-width="5" opacity=".8"/>
+      </g>
+      <defs><filter id="bglow" x="-10%" y="-10%" width="120%" height="120%"><feGaussianBlur stdDeviation="1.4" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter></defs>
+    </svg>
+  </div>
+  <div class="flash"></div>
+  <div class="xw" aria-hidden="true"><i></i><i></i></div>
+</div>
+
+<div class="bgfx" aria-hidden="true"><i class="glowfx"></i><i class="shard s1"></i><i class="shard s2"></i><i class="shard s3"></i><i class="shard s4"></i></div>
+
+<div class="langs" role="group" aria-label="Language"><button type="button" data-lang="en">EN</button><button type="button" data-lang="de">DE</button><button type="button" data-lang="es">ES</button><button type="button" data-lang="it">IT</button></div>
+
+<main class="stage">
+  <h1 class="sr-only">Squad World 4</h1>
+  <div class="quads">
+    <section class="quad q1" data-n="1" aria-labelledby="qt1">
+      <h2 class="sr-only" id="qt1">Squad World 4</h2>
+      <svg class="art" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#artg"/><text class="tn" x="16" y="21">1</text><path class="tl" d="M33 12h14M33 17h14M33 22h14"/><text class="tt" x="96" y="25">Squad World 4</text><text class="ts" x="96" y="40" data-i18n="q1"></text></svg>
+      <div class="in">
+        <figure class="avatar"><span class="ring"></span><img src="https://github.com/Xive080.png?size=128" alt="Avatar de Xive080" width="64" height="64" referrerpolicy="no-referrer" onerror="this.remove()"><span class="pct" aria-hidden="true"></span></figure>
+        <div class="box menu"><ul class="opts" role="listbox"></ul></div>
+        <div class="box info">
+          <div class="detail" aria-live="polite"></div>
+          <p class="pad"><span><i class="d1">✛</i><span data-i18n="h_sel"></span></span><span><i class="d2"></i><span data-i18n="h_ok"></span></span><span><i class="d3"></i><span data-i18n="h_back"></span></span></p>
+        </div>
+      </div>
+    </section>
+    <section class="quad q2" data-n="2" aria-labelledby="qt2">
+      <h2 class="sr-only" id="qt2">dw4-ps2-ai</h2>
+      <svg class="art" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#artg"/><text class="tn" x="16" y="21">2</text><path class="tl" d="M33 12h14M33 17h14M33 22h14"/><text class="tt" x="96" y="25">dw4-ps2-ai</text><text class="ts" x="96" y="40" data-i18n="q2"></text></svg>
+      <div class="in">
+        <figure class="avatar"><span class="ring"></span><img src="https://github.com/Namek025.png?size=128" alt="Avatar de Namek025" width="64" height="64" referrerpolicy="no-referrer" onerror="this.remove()"><span class="pct" aria-hidden="true"></span></figure>
+        <div class="box menu"><ul class="opts" role="listbox"></ul></div>
+        <div class="box info">
+          <div class="detail" aria-live="polite"></div>
+          <p class="pad"><span><i class="d1">✛</i><span data-i18n="h_sel"></span></span><span><i class="d2"></i><span data-i18n="h_ok"></span></span><span><i class="d3"></i><span data-i18n="h_back"></span></span></p>
+        </div>
+      </div>
+    </section>
+    <section class="quad q3" data-n="3" aria-labelledby="qt3">
+      <h2 class="sr-only" id="qt3">dw4-gc</h2>
+      <svg class="art" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#artg"/><text class="tn" x="16" y="21">3</text><path class="tl" d="M33 12h14M33 17h14M33 22h14"/><text class="tt" x="96" y="25">dw4-gc</text><text class="ts" x="96" y="40" data-i18n="q3"></text></svg>
+      <div class="in">
+        <figure class="avatar"><span class="ring"></span><img src="https://github.com/ivanno4317.png?size=128" alt="Avatar de ivanno4317" width="64" height="64" referrerpolicy="no-referrer" onerror="this.remove()"><span class="pct" aria-hidden="true"></span></figure>
+        <div class="box menu"><ul class="opts" role="listbox"></ul></div>
+        <div class="box info">
+          <div class="detail" aria-live="polite"></div>
+          <p class="pad"><span><i class="d1">✛</i><span data-i18n="h_sel"></span></span><span><i class="d2"></i><span data-i18n="h_ok"></span></span><span><i class="d3"></i><span data-i18n="h_back"></span></span></p>
+        </div>
+      </div>
+    </section>
+    <section class="quad q4" data-n="4" aria-labelledby="qt4">
+      <h2 class="sr-only" id="qt4" data-i18n="n4">Others</h2>
+      <svg class="art" viewBox="0 0 320 240" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><use href="#artg"/><text class="tn" x="16" y="21">4</text><path class="tl" d="M33 12h14M33 17h14M33 22h14"/><text class="tt" x="96" y="25" data-i18n="n4">Others</text><text class="ts" x="96" y="40" data-i18n="q4"></text></svg>
+      <div class="in">
+        <figure class="avatar"><span class="ring"></span><span class="glyph">✦</span><span class="pct" aria-hidden="true"></span></figure>
+        <div class="box menu"><ul class="opts" role="listbox"></ul></div>
+        <div class="box info">
+          <div class="detail" aria-live="polite"></div>
+          <p class="pad"><span><i class="d1">✛</i><span data-i18n="h_sel"></span></span><span><i class="d2"></i><span data-i18n="h_ok"></span></span><span><i class="d3"></i><span data-i18n="h_back"></span></span></p>
+        </div>
+      </div>
+    </section>
+  </div>
+</main>
+
+<footer class="hint">
+  <span><kbd>↑</kbd><kbd>↓</kbd><kbd>←</kbd><kbd>→</kbd> <span data-i18n="h_sel"></span></span>
+  <span><kbd>Enter</kbd> <span data-i18n="h_ok"></span></span>
+  <span><kbd>1</kbd>–<kbd>4</kbd> <span data-i18n="h_pan"></span></span>
+  <span><kbd>Esc</kbd> <span data-i18n="h_back"></span></span>
+  <span class="legal" data-i18n="legal"></span>
+</footer>
+
+<noscript><p class="noscript">Squad World 4 · <a href="https://github.com/Namek025/dw4-ps2-ai">dw4-ps2-ai</a> · <a href="https://github.com/ivanno4317/dw4-gc">dw4-gc</a> · <a href="https://github.com/Xive080">Xive080</a></p></noscript>
+<script src="app.js"></script>
+</body>
+</html>
