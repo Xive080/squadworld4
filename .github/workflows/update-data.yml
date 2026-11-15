@@ -1,0 +1,22 @@
+name: Actualizar datos
+on:
+  schedule:
+    - cron: "17 6 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 tools/update_data.py --remote
+      - name: Commit si hay cambios
+        run: |
+          if ! git diff --quiet data.json; then
+            git config user.name "Xive Mac"
+            git config user.email "xive-mac@noreply.dreamsystem.es"
+            git add data.json
+            git commit -m "Actualizar datos de los proyectos"
+            git push
+          fi
